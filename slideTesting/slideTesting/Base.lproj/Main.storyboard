@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11521.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slideTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HO2-DO-I82">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-gp-CDw">
+                                        <state key="normal" title="Show"/>
+                                        <connections>
+                                            <action selector="showSlideView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIT-a4-r59"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxf-yl-HMH">
+                                        <state key="normal" title="Hide"/>
+                                        <connections>
+                                            <action selector="hideSlideView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3X3-nz-unF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-41-r38">
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HO2-DO-I82" secondAttribute="trailing" constant="10" id="50s-25-Oqh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hgG-41-r38" secondAttribute="trailing" id="5hQ-mj-BHQ"/>
+                            <constraint firstItem="hgG-41-r38" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Npw-co-iWF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hgG-41-r38" secondAttribute="bottom" constant="8" id="Qw6-GK-gAw"/>
+                            <constraint firstItem="HO2-DO-I82" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wgt-GT-gY0"/>
+                            <constraint firstItem="hgG-41-r38" firstAttribute="top" secondItem="HO2-DO-I82" secondAttribute="bottom" constant="10" id="oDr-Aa-0YA"/>
+                            <constraint firstItem="HO2-DO-I82" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tEb-na-gPv"/>
+                            <constraint firstItem="HO2-DO-I82" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="vqp-P4-Smm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonStack" destination="HO2-DO-I82" id="kJD-Et-sNM"/>
+                        <outlet property="hideButton" destination="Fxf-yl-HMH" id="S3T-4F-Yqv"/>
+                        <outlet property="masterView" destination="8bC-Xf-vdC" id="oFm-PT-w5J"/>
+                        <outlet property="showButton" destination="ATE-gp-CDw" id="kWD-wf-YoT"/>
+                        <outlet property="slideView" destination="hgG-41-r38" id="7h4-gL-MOZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
